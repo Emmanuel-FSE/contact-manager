@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function AddContact({passContact}) {
+    const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     company: "",
+    photo: "",
   });
   const handleContactSubmit = (event) => {
     event.preventDefault();
@@ -15,8 +19,8 @@ function AddContact({passContact}) {
     })
       .then((response) => response.json())
       .then((data) => passContact(data));
-
-      setFormData({ name: "", email: "", company: "" })
+      setTimeout(() => navigate('/'), 2000);
+      setFormData({ name: "", email: "", company: "", photo: "" })
   };
 
   const handleChange = (event) => {
@@ -58,6 +62,17 @@ function AddContact({passContact}) {
             className="form-control"
             placeholder="Enter Your company name"
             defaultValue={formData.company}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="form-group">
+          <label>Photo</label>
+          <input
+            type="text"
+            name="photo"
+            className="form-control"
+            placeholder="Enter a photo url to represent the contact"
+            defaultValue={formData.photo}
             onChange={handleChange}
           />
         </div>

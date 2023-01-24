@@ -12,16 +12,22 @@ function App() {
       .then((response) => response.json())
       .then((data) => setContactList(data));
   }, []);
-
   function handleSubmitRender(data){
     setContactList([...contacts, data]);
+  }
+
+  function updateDelete(data){
+    const updatedData = contacts.filter((item) => {
+      return item.id !== data
+    })
+    setContactList(updatedData);
   }
 
   return (
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<ContactList contactData={contacts} />} />
+        <Route path="/" element={<ContactList contactData={contacts} deleted={updateDelete} />} />
         {/* <Route path="/login" element={<Login />}/> */}
         <Route
           path="/addContact"

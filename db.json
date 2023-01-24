@@ -1,33 +1,6 @@
 {
   "contacts": [
     {
-      "id": "5b2eee0a8fdd5b71c8148490",
-      "age": 29,
-      "name": "Campos York",
-      "gender": "male",
-      "company": "AVENETRO",
-      "email": "camposyork@avenetro.com",
-      "photo": "https://randomuser.me/api/portraits/men/3.jpg"
-    },
-    {
-      "id": "5b2eee0a9cd29e820c10edad",
-      "age": 20,
-      "name": "Esperanza Boone",
-      "gender": "female",
-      "company": "COSMETEX",
-      "email": "esperanzaboone@cosmetex.com",
-      "photo": "https://randomuser.me/api/portraits/men/48.jpg"
-    },
-    {
-      "id": "5b2eee0a582ba867abbd7ce7",
-      "age": 39,
-      "name": "Holden Barry",
-      "gender": "male",
-      "company": "CODAX",
-      "email": "holdenbarry@codax.com",
-      "photo": "https://randomuser.me/api/portraits/men/45.jpg"
-    },
-    {
       "id": "5b2eee0afe5f471c63fa7acf",
       "age": 22,
       "name": "Daniels Barlow",
@@ -541,15 +514,6 @@
       "photo": "https://randomuser.me/api/portraits/men/43.jpg"
     },
     {
-      "id": "5b2eee0add8f6138c89935ea",
-      "age": 23,
-      "name": "Maura Bennett",
-      "gender": "female",
-      "company": "ZEDALIS",
-      "email": "maurabennett@zedalis.com",
-      "photo": "https://randomuser.me/api/portraits/men/19.jpg"
-    },
-    {
       "id": "5b2eee0adced0c823b16e0df",
       "age": 35,
       "name": "Glass Salas",
@@ -905,30 +869,6 @@
       "email": "emmanuel@gmail.com",
       "company": "Lidonation",
       "id": "5EaYeNf"
-    },
-    {
-      "name": "Mr.cat",
-      "email": "emmanuelx@gmail.com",
-      "company": "NRCF",
-      "id": "SVAZPCW"
-    },
-    {
-      "name": "Chapo",
-      "email": "emmanuelx78@gmail.com",
-      "company": "qwerty",
-      "id": "g_XXzU-"
-    },
-    {
-      "name": "Doggy Zee",
-      "email": "dog@gmail.com",
-      "company": "dogzee",
-      "id": "98b_KtI"
-    },
-    {
-      "name": "Emmax Mkamba",
-      "email": "mkamba@gmail.com",
-      "company": "dogzeeQw",
-      "id": "HJ020Nc"
     },
     {
       "name": "Emmax Manu",

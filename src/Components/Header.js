@@ -1,12 +1,16 @@
 import React from "react";
- 
+import { NavLink as Link } from "react-router-dom";
+
 const Header = () => {
-    return (
-      <div className="ui fixed menu">
-        <div className="ui container center">
-            <h2>CONTACT MANAGER</h2>
-        </div>
+  return (
+    <div className="bg-dark p-4">
+      <h1 className="text-light text-center">Contact Manager</h1>
+      <div className="d-flex justify-content-around">
+        <Link className="btn btn-warning" to="/">Contact List</Link>
+        <Link className="btn btn-warning" to="/addContact">Add Contact</Link>
+        {/* <Link to="/Login">login ? Login : Logout</Link> */}
       </div>
-    );
-}
+    </div>
+  );
+};
 export default Header;

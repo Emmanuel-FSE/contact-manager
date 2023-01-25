@@ -8,7 +8,7 @@ const Header = () => {
       <div className="d-flex justify-content-around">
         <Link className="btn btn-warning" to="/contactList">Contact List</Link>
         <Link className="btn btn-warning" to="/addContact">Add Contact</Link>
-        <Link className="btn btn-warning" to="/">Login LogOut</Link>
+        <Link className="btn btn-warning" to="/">Logout</Link>
       </div>
     </div>
   );

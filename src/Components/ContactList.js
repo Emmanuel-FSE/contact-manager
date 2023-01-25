@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const ContactList = ({ contactData, deleted }) => {
   function handleDelete(e){
@@ -24,7 +25,7 @@ const ContactList = ({ contactData, deleted }) => {
           <p className="card-text">{contact.company}</p>
         </div>
         <div className="d-flex justify-content-around mb-2">
-          <button className="btn btn-outline-dark">Edit</button>
+          <NavLink to={`/edit/${contact.id}`} className="btn btn-outline-dark">Edit</NavLink>
           <button onClick={handleDelete} id={contact.id} className="btn btn-outline-danger">Delete</button>
         </div>
       </div>

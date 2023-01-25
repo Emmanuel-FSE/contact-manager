@@ -13,10 +13,17 @@ function LoginPage() {
     if (username === "" || password === "") {
       setIsActive(!isActive);
     } else {
-      console.log("Username: ", username);
-      console.log("Password: ", password);
       setTimeout(() => navigate('/contactList'), 2000);
     }
+    let formData = {
+      username: username,
+      password: password
+    }
+    fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    })
   }
   
   return (
@@ -40,7 +47,7 @@ function LoginPage() {
           />
         </div>
         <div className="form-group mt-2">
-          <label>Email address</label>
+          <label>Password</label>
           <input
             type="password"
             name="password"
@@ -52,8 +59,8 @@ function LoginPage() {
         <button className="btn btn-outline-dark input-block-level form-control mt-3">Login</button>
       </form>
       <div className= "alert alert-success mt-5">
-        <h3>Welcome to Contact Manager</h3>
-        <p>Login to view your saved data</p> 
+        <h3>Welcome to Contact Manager.</h3>
+        <p>Login to view your saved data.</p> 
       </div>
     </div>
   );

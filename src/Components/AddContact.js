@@ -19,7 +19,7 @@ function AddContact({passContact}) {
     })
       .then((response) => response.json())
       .then((data) => passContact(data));
-      setTimeout(() => navigate('/'), 2000);
+      setTimeout(() => navigate('/contactList'), 2000);
       setFormData({ name: "", email: "", company: "", photo: "" })
   };
 
@@ -37,7 +37,7 @@ function AddContact({passContact}) {
           <input
             type="text"
             className="form-control"
-            placeholder="Name"
+            placeholder="Name."
             name="name"
             defaultValue={formData.name}
             onChange={handleChange}
@@ -49,7 +49,7 @@ function AddContact({passContact}) {
             type="email"
             name="email"
             className="form-control"
-            placeholder="Enter email"
+            placeholder="Enter your email."
             defaultValue={formData.email}
             onChange={handleChange}
           />
@@ -60,7 +60,7 @@ function AddContact({passContact}) {
             type="text"
             name="company"
             className="form-control"
-            placeholder="Enter Your company name"
+            placeholder="Enter Your company name."
             defaultValue={formData.company}
             onChange={handleChange}
           />
@@ -71,7 +71,7 @@ function AddContact({passContact}) {
             type="text"
             name="photo"
             className="form-control"
-            placeholder="Enter a photo url to represent the contact"
+            placeholder="Enter a photo url to represent the contact."
             defaultValue={formData.photo}
             onChange={handleChange}
           />

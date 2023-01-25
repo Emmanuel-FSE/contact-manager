@@ -11,11 +11,13 @@ function App() {
   const [contacts, setContactList] = useState([]);
   const [render, setRender] = useState(true)
   const location = useLocation();
+
   useEffect(() => {
-    fetch("http://localhost:3000/contacts")
+    fetch("http://localhost:3000/contacts?_sort=name")
       .then((response) => response.json())
       .then((data) => setContactList(data));
   }, [render]);
+  
   function handleSubmitRender(data){
     setContactList([...contacts, data]);
   }

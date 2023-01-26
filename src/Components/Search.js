@@ -8,7 +8,7 @@ function Search({ onSearch }) {
     onSearch(e.target.value);
   };
   return (
-    <div className="input-group mt-3">
+    <div className=" mt-3">
       <input
         type="text"
         className="form-control"

@@ -9,7 +9,7 @@ import Edit from "./Edit";
 
 function App() {
   const [contacts, setContactList] = useState([]);
-  const [render, setRender] = useState(true)
+  const [render, setRender] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
@@ -17,19 +17,19 @@ function App() {
       .then((response) => response.json())
       .then((data) => setContactList(data));
   }, [render]);
-  
-  function handleSubmitRender(data){
+
+  function handleSubmitRender(data) {
     setContactList([...contacts, data]);
   }
 
-  function updateDelete(data){
+  function updateDelete(data) {
     const updatedData = contacts.filter((item) => {
-      return item.id !== data
-    })
+      return item.id !== data;
+    });
     setContactList(updatedData);
   }
 
-  function handlePatch(data){
+  function handlePatch(data) {
     setRender(!render);
   }
 
@@ -37,10 +37,21 @@ function App() {
     <div>
       {location.pathname === "/" ? null : <Header />}
       <Routes>
-        <Route path="/contactList" element={<ContactList contactData={contacts} deleted={updateDelete} />}/>
-        <Route path="/" element={<LoginPage />}/>
-        <Route path="/edit/:contactId" element={<Edit contactData={contacts} patched={handlePatch} />}/>
-        <Route path="/addContact" element={<AddContact passContact={handleSubmitRender} />}/>
+        <Route
+          path="/contactList"
+          element={
+            <ContactList contactData={contacts} deleted={updateDelete} />
+          }
+        />
+        <Route path="/" element={<LoginPage />} />
+        <Route
+          path="/edit/:contactId"
+          element={<Edit contactData={contacts} patched={handlePatch} />}
+        />
+        <Route
+          path="/addContact"
+          element={<AddContact passContact={handleSubmitRender} />}
+        />
       </Routes>
     </div>
   );

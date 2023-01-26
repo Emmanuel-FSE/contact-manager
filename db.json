@@ -550,15 +550,6 @@
       "photo": "https://randomuser.me/api/portraits/men/25.jpg"
     },
     {
-      "id": "5b2eee0a775a40828277fef9",
-      "age": 22,
-      "name": "Amanda Colon",
-      "gender": "female",
-      "company": "SPORTAN",
-      "email": "amandacolon@sportan.com",
-      "photo": "https://randomuser.me/api/portraits/men/9.jpg"
-    },
-    {
       "id": "5b2eee0a8b88cd593c76d606",
       "age": 39,
       "name": "Foreman English",
@@ -915,6 +906,11 @@
       "username": "Transcription",
       "password": "xexe",
       "id": 9
+    },
+    {
+      "username": "meg",
+      "password": "meggiddy",
+      "id": 10
     }
   ]
 }
